@@ -41,12 +41,3 @@ export class AppComponent {
       this.msgVal = '';
   }
 }
-
-/*
-    this.afAuth.auth.signInWithPopup(provider).then(function(result) {
-      // The firebase.User instance:
-      var user = result.user;
-      // The Facebook firebase.auth.AuthCredential containing the Facebook
-      // access token:
-      var 
-*/
