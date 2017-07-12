@@ -12,12 +12,12 @@ import { LueggDirective } from './luegg.directive';
 
 
 export const firebaseConfig = {
-  apiKey: "AIzaSyBLvfL7B1PqYm08WgdlFY7N-li1dFJps6E",
-  authDomain: "angular-chat-1cba0.firebaseapp.com",
-  databaseURL: "https://angular-chat-1cba0.firebaseio.com",
-  projectId: "angular-chat-1cba0",
-  storageBucket: "angular-chat-1cba0.appspot.com",
-  messagingSenderId: "792962521375"
+  apiKey: "",
+  authDomain: "",
+  databaseURL: "",
+  projectId: "",
+  storageBucket: "",
+  messagingSenderId: ""
 };
 
 @NgModule({
