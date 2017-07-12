@@ -1,0 +1,36 @@
+<style type="text/css">
+      [scroll-glue-top],
+      [scroll-glue-bottom],
+      [scroll-glue]{
+        width: 100%;
+        height: 500px;
+        overflow-y: scroll;
+        border: 1px solid gray;
+      }
+
+      [scroll-glue-left],
+      [scroll-glue-right]{
+        width: 100px;
+        overflow-x: scroll;
+        border: 1px solid gray;
+        padding: 10px;
+      }
+
+      [scroll-glue-left] span,
+      [scroll-glue-right] span{
+        border: 1px solid black;
+      }
+</style>
+
+<div class="row columns">
+  <button (click)="login()" *ngIf="!(user | async)?.uid">Anonymous Login</button>
+  <button (click)="logout()" *ngIf="(user | async)?.uid">Logout</button>
+
+  
+      <div id="details-container" scroll-glue="glued">
+        <p *ngFor="let item of items | async">{{item.message}}</p>
+      </div>
+    
+  <input type="text" id="message" *ngIf="(user | async)?.uid" placeholder="Chat Here..." (keyup.enter)="Send($event.target.value)"
+    [(ngModel)]="msgVal" />
+</div>
